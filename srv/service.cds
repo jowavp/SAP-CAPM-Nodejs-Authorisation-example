@@ -8,3 +8,12 @@ service CapmAuthService { //@(requires:'user'){
   }
     
 }
+
+service CapmAuthUserService @(requires:'user'){
+  
+  // @cds.persistence.skip
+  entity User {
+    key username   : String;
+  }
+    
+}
