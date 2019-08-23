@@ -3,14 +3,6 @@ _schema-version: "2.1"
 description: Test Capm Authorisations
 version: 0.0.1
 modules:
-  - name: CAPMAuthorisation-db
-    type: hdb
-    path: db
-    parameters:
-      memory: 256M
-      disk-quota: 256M
-    requires:
-      - name: CAPMAuthorisation-db-hdi-container
   - name: CAPMAuthorisation-srv
     type: nodejs
     path: srv
@@ -22,18 +14,11 @@ modules:
         properties:
           url: ${default-url}
     requires:
-      - name: CAPMAuthorisation-db-hdi-container
       - name: CAPMAuthorisation-uaa
 resources:
-  - name: CAPMAuthorisation-db-hdi-container
-    type: com.sap.xs.hdi-container
-    properties:
-      hdi-container-name: ${service-name}
   - name: CAPMAuthorisation-uaa
-    type: org.cloudfoundry.managed-service
+    type: com.sap.xs.uaa
     parameters:
-      service-plan: default
+      service-plan: application
       service: xsuaa
-      config:
-        xsappname: CAPMAuthorisation-${space}
-        tenant-mode: dedicated
+      path: xs-security.json

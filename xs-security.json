@@ -1,0 +1,34 @@
+{
+	"xsappname"     : "CAPMAuthorisation",
+	"tenant-mode"	: "dedicated",
+	"description": "Security profile of called application",
+	"scopes": [
+		{
+			"name": "uaa.user",
+			"description": "UAA"
+		},
+		{
+			"name": "$XSAPPNAME.user",
+			"description": "User"
+		}, {
+			"name": "$XSAPPNAME.admin",
+			"description": "Administrator"
+		}
+	],
+	"role-templates": [
+		{
+			"name": "Token_Exchange",
+			"description": "UAA",
+			"scope-references": [
+				"uaa.user", "$XSAPPNAME.user"
+			]
+		},
+		{
+			"name": "CA_User",
+			"description": "UAA",
+			"scope-references": [
+				"uaa.user", "$XSAPPNAME.user"
+			]
+		}
+	]
+}
