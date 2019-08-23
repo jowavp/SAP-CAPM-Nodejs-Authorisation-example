@@ -1,0 +1,15 @@
+{
+	"welcomeFile": "/capm-auth",
+	"authenticationMethod": "route",
+	"logout": {
+		"logoutEndpoint": "/do/logout"
+	},
+	"routes": [{
+		"source": "^/(.*)$",
+		"target": "$1",
+		"authenticationType": "xsuaa",
+		"scope": "$XSAPPNAME.user",
+		"destination": "srv_api",
+		"csrfProtection": false
+	}]
+}

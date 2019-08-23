@@ -3,6 +3,20 @@ _schema-version: "2.1"
 description: Test Capm Authorisations
 version: 0.0.1
 modules:
+  - name: CAPMAuthorisation-approuter
+    type: approuter.nodejs
+    path: approuter
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+    requires:
+      - name: CAPMAuthorisation-uaa
+      - name: srv_api
+        group: destinations
+        properties:
+          forwardAuthToken: true
+          name: srv_api
+          url: '~{url}'
   - name: CAPMAuthorisation-srv
     type: nodejs
     path: srv
