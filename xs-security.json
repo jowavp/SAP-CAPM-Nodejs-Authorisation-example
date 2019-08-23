@@ -25,7 +25,7 @@
 		},
 		{
 			"name": "CA_User",
-			"description": "UAA",
+			"description": "User",
 			"scope-references": [
 				"uaa.user", "$XSAPPNAME.user"
 			]
