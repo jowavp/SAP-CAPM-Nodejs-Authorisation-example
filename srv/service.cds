@@ -9,6 +9,7 @@ service CapmAuthService {
     
 }
 
+@impl:'../service.js'
 service CapmAuthUserService @(requires:'user'){
   
   // @cds.persistence.skip

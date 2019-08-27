@@ -12,5 +12,6 @@ const readFunction = async (req) => {
 };
 
 module.exports = (srv) => {
+	console.log(srv);
 	srv.on('READ', 'User', readFunction);
 };
