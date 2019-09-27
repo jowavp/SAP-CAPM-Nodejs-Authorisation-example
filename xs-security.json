@@ -13,6 +13,9 @@
 		}, {
 			"name": "$XSAPPNAME.admin",
 			"description": "Administrator"
+		}, {
+			"name": "$XSAPPNAME.dummy",
+			"description": "Dummy"
 		}
 	],
 	"role-templates": [
@@ -28,6 +31,13 @@
 			"description": "User",
 			"scope-references": [
 				"uaa.user", "$XSAPPNAME.user"
+			]
+		},
+		{
+			"name": "CA_Admin",
+			"description": "User",
+			"scope-references": [
+				"uaa.user", "$XSAPPNAME.user", "$XSAPPNAME.admin"
 			]
 		}
 	]

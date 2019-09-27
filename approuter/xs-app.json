@@ -1,5 +1,5 @@
 {
-	"welcomeFile": "/capm-auth",
+	"welcomeFile": "/capm-auth-user",
 	"authenticationMethod": "route",
 	"logout": {
 		"logoutEndpoint": "/do/logout"
