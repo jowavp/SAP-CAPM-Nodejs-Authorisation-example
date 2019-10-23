@@ -16,6 +16,7 @@ modules:
         properties:
           forwardAuthToken: true
           name: srv_api
+          strictSSL: false
           url: '~{url}'
   - name: CAPMAuthorisation-srv
     type: nodejs

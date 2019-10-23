@@ -15,9 +15,11 @@
         "@sap/cds": "^3.18.1",
         "@sap/xssec": "^2.2.3",
         "express": "^4.17.1",
-        "hdb": "^0.17.1",
         "passport": "^0.4.0",
-        "sqlite3": "^4.1.0"
+        "sqlite3": "^4.1.0",
+        "hdb": "^0.17.1",
+        "compression": "^1.7.4",
+        "helmet": "^3.19.0"
     },
     "devDependencies": {},
     "scripts": {
