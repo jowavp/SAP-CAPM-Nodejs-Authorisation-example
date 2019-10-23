@@ -35,4 +35,4 @@ resources:
     parameters:
       service-plan: application
       service: xsuaa
-      path: xs-security.json
+      path: ./xs-security.json

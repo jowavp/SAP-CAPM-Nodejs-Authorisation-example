@@ -12,12 +12,16 @@
         "srv"
     ],
     "dependencies": {
-        "@sap/cds": "^3.13.0",
+        "@sap/cds": "^3.18.1",
+        "@sap/xssec": "^2.2.3",
         "express": "^4.17.1",
-        "hdb": "^0.17.1"
+        "hdb": "^0.17.1",
+        "passport": "^0.4.0",
+        "sqlite3": "^4.1.0"
     },
     "devDependencies": {},
     "scripts": {
+        "start:local": "cds run --in-memory",
         "start": "cds run",
         "build": "cds build/all --clean",
         "deploy": "cds deploy"
