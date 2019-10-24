@@ -1,6 +1,6 @@
 @impl:'service.js'
 @cds.query.limit: 100
-service CapmAuthUserService @(requires:'user'){
+service CapmAuthUserService @(requires:'authenticated-user'){
   
   // @cds.persistence.skip
   entity User {
